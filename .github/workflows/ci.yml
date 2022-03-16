@@ -7,7 +7,7 @@ on:
             - main
 
 jobs:
-    tests:
+    test:
         name: Molecule
         runs_on: ubuntu-latest
         strategy:

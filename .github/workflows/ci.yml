@@ -12,9 +12,9 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
                 matrix:
-                distro:
-                    - centos8
-                    - debian10
+                    distro:
+                        - centos8
+                        - debian10
         steps:
             - name: check out the codebase.
               uses: actions/checkout@v2

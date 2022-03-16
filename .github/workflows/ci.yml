@@ -17,7 +17,7 @@ jobs:
                     - debian10
         staps:
             - name: check out the codebase.
-              uses: actions/checkout@2
+              uses: actions/checkout@v2
 
             - name: set up python 3.
               uses: actions/setup-python@v2

@@ -1,6 +1,6 @@
 ---
 name: CI
-one:
+on:
     pull_request:
     push:
         branches:

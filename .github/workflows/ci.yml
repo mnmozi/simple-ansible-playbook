@@ -15,19 +15,19 @@ jobs:
                 distro:
                     - centos8
                     - debian10
-    staps:
-        - name: check out the codebase.
-          uses: actions/checkout@2
+        staps:
+            - name: check out the codebase.
+              uses: actions/checkout@2
 
-        - name: set up python 3.
-          uses: actions/setup-python@v2
-          with:
-            python-version: '3.x'
-        - name: Install test dependencies.
-          run: pip3 install molecule[docker] yamllint ansible-lint
-        - name: Run Molecule tests.
-          run: molecule test
-          env:
-            PY_COLORS: '1'
-            ANSIBLE_FORCE_COLOR: '1'
-            MOLECULE_DISTRO: ${{ matrix.distro }}
+            - name: set up python 3.
+              uses: actions/setup-python@v2
+              with:
+                python-version: '3.x'
+            - name: Install test dependencies.
+              run: pip3 install molecule[docker] yamllint ansible-lint
+            - name: Run Molecule tests.
+              run: molecule test
+              env:
+                PY_COLORS: '1'
+                ANSIBLE_FORCE_COLOR: '1'
+                MOLECULE_DISTRO: ${{ matrix.distro }}

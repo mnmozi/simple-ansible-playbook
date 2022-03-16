@@ -15,7 +15,7 @@ jobs:
                 distro:
                     - centos8
                     - debian10
-        staps:
+        steps:
             - name: check out the codebase.
               uses: actions/checkout@v2
 
